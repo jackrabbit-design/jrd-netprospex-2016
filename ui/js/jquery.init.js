@@ -4,63 +4,6 @@
 
 jQuery(function($){
 
-    var ctx = $("#missing")
-
-    var data = {
-        datasets: [{
-            data: [
-                77,
-                87,
-                86,
-                0,0,0,0,0,0,
-                62,
-                82,
-                45,
-            ],
-            backgroundColor: [
-                "#73B564",
-                "#929497",
-                "#4D4D4F",
-                "#000","#000","#000","#000","#000","#000",
-                "#004C6C",
-                "#109CBF",
-                "#00B4AE"
-            ],
-            label: 'My dataset' // for legend
-        }],
-        labels: [
-            "Red",
-            "Green",
-            "Yellow",
-            '','','','','','',
-            "Grey",
-            "Dark Grey",
-            "Another",
-        ]
-    };
-
-
-    new Chart(ctx, {
-        data:data,
-        type: 'polarArea',
-        options: {
-            elements: {
-                arc: {
-                    borderWidth: 0
-                }
-            },
-            tooltips: {
-                enabled: false
-            },
-            legend: {
-                display: false
-            },
-            scale: {
-                display: false
-            }
-        }
-    });
-
 
     // PARALLAX
 /*

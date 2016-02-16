@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="MSSmartTagsPreventParsing" content="true" /><!--[if lte IE 9]><meta http-equiv="X-UA-Compatible" content="IE=Edge"/><![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <title>Title</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" /> -->
+    <title>The B2B Marketing Data Report 2016 | Dun &amp; Bradstreet</title>
 	<link type="text/css" rel="stylesheet" media="all" href="ui/css/style.css" />
     <link type="text/plain" rel="author" href="authors.txt" />
     <link type="image/x-icon" rel="shortcut icon" href="favicon.ico" />
@@ -74,13 +74,89 @@
 
     <section id="quality">
         <h3>Shining a Light on Data Quality</h3>
-        <canvas id="missing" width="400" height="400"></canvas>
+        <p>It seems that we often pay lip service to the importance of good data, but fail to actually clean it up. Here’s a quick look at what we found in this year's data analysis:</p>
+        <div id="gap">
+            <h4>Gap Analysis</h4>
+            <img class="gap" src="ui/images/chart-gap.png" alt="" />
+            <div class="ind">
+                Missing Industry Info
+                <span>77<small>%</small></span>
+            </div>
+            <div class="rev">
+                Missing Revenue Info
+                <span>87<small>%</small></span>
+            </div>
+            <div class="emp">
+                Missing Employee Info
+                <span>86<small>%</small></span>
+            </div>
+            <div class="pho">
+                Missing Phone Number
+                <span>62<small>%</small></span>
+            </div>
+            <div class="web">
+                Missing Website Domain
+                <span>82<small>%</small></span>
+            </div>
+            <div class="ttl">
+                Missing<br/>Title Info
+                <span>45<small>%</small></span>
+            </div>
+            <span class="folder">Missing Information</span>
+        </div>
+        <div id="ind">
+            <h4>Top Industries<br/>Represented</h4>
+            <ul>
+                <li class="sof">
+                    <div class="ico"></div>
+                    <div class="bar"></div>
+                    <strong>24<small>%</small></strong>
+                    <span>Software</span>
+                </li>
+                <li class="bus">
+                    <div class="ico"></div>
+                    <div class="bar"></div>
+                    <strong>20<small>%</small></strong>
+                    <span>Business Services</span>
+                </li>
+                <li class="man">
+                    <div class="ico"></div>
+                    <div class="bar"></div>
+                    <strong>17<small>%</small></strong>
+                    <span>Manufacturing</span>
+                </li>
+                <li class="oth">
+                    <div class="ico"></div>
+                    <div class="bar"></div>
+                    <strong>15<small>%</small></strong>
+                    <span>Other</span>
+                </li>
+                <li class="com">
+                    <div class="ico"></div>
+                    <div class="bar"></div>
+                    <strong>10<small>%</small></strong>
+                    <span>Computer Equipment</span>
+                </li>
+                <li class="inf">
+                    <div class="ico"></div>
+                    <div class="bar"></div>
+                    <strong>7<small>%</small></strong>
+                    <span>Information Management</span>
+                </li>
+                <li class="tel">
+                    <div class="ico"></div>
+                    <div class="bar"></div>
+                    <strong>7<small>%</small></strong>
+                    <span>Telecommunications</span>
+                </li>
+            </ul>
+        </div>
+        <hr class="clear" />
     </section>
 
 </div>
 
     <script src="ui/js/jquery.plugins.js" type="text/javascript"></script>
-    <script src="ui/js/Chart.min.js"></script>
     <script src="ui/js/jquery.init.js" type="text/javascript"></script>
 </body>
 </html>

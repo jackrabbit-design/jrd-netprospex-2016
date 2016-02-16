@@ -77,11 +77,13 @@
 
     @mixin size($w, $h: $w) { width: $w; height: $h; }
 
+    $blu: #004D71;
+
 /* ========================================================================= */
 /* !STYLES */
 /* ========================================================================= */
 
-	html, body { font-family:'OpenSans', Helvetica, Arial, "Helvetica Neue", sans-serif; background:#e7e7e8; }
+	html, body { font-family:'OpenSans', Helvetica, Arial, "Helvetica Neue", sans-serif; background:#e7e7e8; color:#4D4D4F; }
 
 /* != SELECTION STYLES (Leaving these blank will show no indication of text selection) ===== */
 /*
@@ -142,7 +144,7 @@
 
     .wrap { width: 1100px; box-sizing: border-box; margin: 0 auto; max-width: 100%; padding: 0 20px; }
 
-    #main { max-width:1024px; margin:0 auto; background:#fff; }
+    #main { width:1024px; margin:0 auto; background:#fff; padding-bottom:1000px; }
 
     #banner {
         background:url(../images/bg-banner.png) no-repeat center center;
@@ -396,6 +398,277 @@
             border-style: solid;
             position: absolute;
             top:0;
+        }
+        h3 {
+            color:$blu;
+            font-size:40px;
+            line-height:40px;
+            font-weight:600;
+            text-align:center;
+        }
+        p {
+            text-align:center;
+            font-size:16px;
+            line-height:1.625;
+            margin-top:20px;
+            max-width:660px;
+            margin:20px auto 40px;
+        }
+        #gap {
+            width: 580px;
+            float:left;
+            padding-left:80px;
+            position: relative;
+            .gap {
+                margin:120px auto 20px;
+                width:322px;
+                display:block;
+            }
+            div {
+                font-size:10.5px;
+                line-height:12px;
+                max-width:80px;
+                text-align:center;
+                position: absolute;
+                padding-top:40px;
+                background-repeat:no-repeat;
+                top:50%;
+                left:50%;
+                span {
+                    font-size:22px;
+                    line-height:1;
+                    color:#fff;
+                    position:absolute;
+                    small {
+                        font-size:16.5px;
+                    }
+                }
+            }
+            .ind {
+                background-image:url(../images/ico-ind.png);
+                background-size:25px auto;
+                background-position:center 7px;
+                margin-left:-199px;
+                margin-top:68px;
+                color:#004C6C;
+                span {
+                    top: 41px;
+                    left: 97px;
+                }
+            }
+            .rev {
+                background-image:url(../images/ico-rev.png);
+                background-size:29px auto;
+                background-position:center 5px;
+                margin-left: -169px;
+                margin-top: -41px;
+                color:#109CBF;
+                span {
+                    top: 69px;
+                    left: 80px;
+                }
+            }
+            .emp {
+                background-image:url(../images/ico-emp.png);
+                background-size:26px auto;
+                background-position:center 7px;
+                margin-left: -61px;
+                margin-top: -96px;
+                color:#00B4AE;
+                span {
+                    top: 83px;
+                    left: 40px;
+                }
+            }
+            .pho {
+                background-image:url(../images/ico-pho.png);
+                background-size:24px auto;
+                background-position:center 8px;
+                margin-left: 50px;
+                margin-top: -71px;
+                color:#73B564;
+                span {
+                    top: 84px;
+                    left: 11px;
+                }
+            }
+            .web {
+                background-image:url(../images/ico-web.png);
+                background-size:27px auto;
+                background-position:center 6px;
+                margin-left: 166px;
+                margin-top: -41px;
+                color:#929497;
+                span {
+                    top: 70px;
+                    left: -31px;
+                }
+            }
+            .ttl {
+                background-image:url(../images/ico-ttl.png);
+                background-size:27px auto;
+                background-position:center 6px;
+                margin-left: 160px;
+                margin-top: 88px;
+                color:#4D4D4F;
+                span {
+                    top: 37px;
+                    left: -67px;
+                }
+            }
+            .folder {
+                padding-top:34px;
+                background:url(../images/ico-folder.png) no-repeat center top;
+                background-size:47px auto;
+                font-weight:600;
+                font-size:14px;
+                position: absolute;
+                bottom:-15px;
+                left:50%;
+                margin-left:-27px;
+            }
+        }
+        #ind {
+            width:444px;
+            float:right;
+            padding-bottom:70px;
+            ul { margin-top:45px; }
+            li {
+                padding:4px 0;
+                * {
+                    display:inline-block;
+                    vertical-align: middle;
+                }
+                .ico {
+                    width: 55px;
+                    height:30px;
+                    background-position:center center;
+                    background-repeat:no-repeat;
+                }
+                .bar {
+                    height:26px;
+                    background:#000;
+                    width:50px;
+                }
+                strong {
+                    font-weight:400;
+                    font-size:22px;
+                    padding:0 5px;
+                    small {
+                        font-size:16px;
+                        position: relative;
+                        top:-2px;
+                    }
+                }
+                span {
+                    font-size:12px;
+                    color:#929497;
+                }
+                &.sof {
+                    .ico {
+                        background-image:url(../images/ico-sof.png);
+                        background-size:25px auto;
+                    }
+                    .bar {
+                        background:#4D4D4F;
+                        width:106px;
+                    }
+                    strong {
+                        color:#4D4D4F;
+                    }
+                }
+                &.bus {
+                    .ico {
+                        background-image:url(../images/ico-bus.png);
+                        background-size:auto 30px;
+                    }
+                    .bar {
+                        background:#004C6C;
+                        width:88px;
+                    }
+                    strong {
+                        color:#004C6C;
+                    }
+                }
+                &.man {
+                    .ico {
+                        background-image:url(../images/ico-man.png);
+                        background-size:24px auto;
+                    }
+                    .bar {
+                        background:#109CBF;
+                        width:75px;
+                    }
+                    strong {
+                        color:#109CBF;
+                    }
+                }
+                &.oth {
+                    .ico {
+                        background-image:url(../images/ico-oth.png);
+                        background-size:auto 25px;
+                    }
+                    .bar {
+                        background:#00B4AE;
+                        width:66px;
+                    }
+                    strong {
+                        color:#00B4AE;
+                    }
+                }
+                &.com {
+                    .ico {
+                        background-image:url(../images/ico-com.png);
+                        background-size:30px auto;
+                    }
+                    .bar {
+                        background:#73B564;
+                        width:44px;
+                    }
+                    strong {
+                        color:#73B564;
+                    }
+                }
+                &.inf {
+                    .ico {
+                        background-image:url(../images/ico-inf.png);
+                        background-size:17px auto;
+                    }
+                    .bar {
+                        background:#929497;
+                        width:31px
+                    }
+                    strong {
+                        color:#929497;
+                    }
+                }
+                &.tel {
+                    .ico {
+                        background-image:url(../images/ico-tel.png);
+                        background-size:auto 21px;
+                    }
+                    .bar {
+                        background:#93D4D2;
+                        width:31px
+                    }
+                    strong {
+                        color:#7ECDCA;
+                    }
+                }
+            }
+        }
+        h4 {
+            text-align:center;
+            font-size:22px;
+            line-height:1.2;
+            color:#109CBF;
+            letter-spacing: 1px;
+            font-weight:600;
+            text-transform: uppercase;
+        }
+        hr {
+            border-color:#BCBEC0;
+            margin:0 0 70px;
         }
     }
 
