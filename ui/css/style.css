@@ -284,7 +284,39 @@ html, body { font-family: 'OpenSans', Helvetica, Arial, "Helvetica Neue", sans-s
 #quality #ind li.tel .bar { background: #93D4D2; width: 31px; }
 #quality #ind li.tel strong { color: #7ECDCA; }
 #quality h4 { text-align: center; font-size: 22px; line-height: 1.2; color: #109CBF; letter-spacing: 1px; font-weight: 600; text-transform: uppercase; }
-#quality hr { border-color: #BCBEC0; margin: 0 0 70px; }
+#quality hr { border-color: #BCBEC0; margin: 0; }
+
+#average { padding: 60px 100px; font-size: 0; }
+#average h4 { margin-bottom: 55px; }
+#average .col { width: 20%; display: inline-block; vertical-align: top; height: 165px; }
+#average .col.top { height: 135px; vertical-align: top; }
+#average .col h5 { font-size: 14px; line-height: 1.3; color: #4D4D4F; }
+#average .col h5 img { padding-right: 10px; display: inline-block; vertical-align: middle; height: 40px; }
+#average .col h5 span { display: inline-block; vertical-align: middle; }
+#average .col h6 { font-size: 48px; line-height: 1; color: #87BD7A; margin: 5px 0 0 30px; }
+#average .col h6:after { content: 'Average Score'; font-size: 9px; color: #87BD7A; letter-spacing: 1px; text-transform: uppercase; display: block; margin-top: 5px; }
+#average .col .bars li { height: 23px; background: #f1f1f2; white-space: nowrap; }
+#average .col .bars li:nth-child(2n) { height: 33px; padding: 5px 0; background: #fff; }
+#average .col.legend { position: relative; background: url(../images/average-legend.png) no-repeat 22px 2px; background-size: auto 134px; }
+#average .col.legend .turn { position: absolute; top: 0; left: 14px; -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); font-size: 10px; color: #929497; letter-spacing: 1px; text-transform: uppercase; -webkit-transform-origin: top left; -ms-transform-origin: top left; transform-origin: top left; width: 135px; text-align: center; }
+#average .col.legend .bars { width: 115px; float: right; color: #4D4D4F; font-size: 13px; line-height: 23px; }
+#average .col.legend .bars li { padding-left: 8px; }
+#average .col.chart .bars li span { vertical-align: top; display: inline-block; width: 30px; font-size: 13px; line-height: 23px; font-weight: 500; }
+#average .col.chart .bars li span small { font-size: 10px; }
+#average .col.chart .bars li div { vertical-align: top; display: inline-block; height: 23px; width: 50px; background: red; }
+#average .col.chart .bars li:nth-child(1) span { color: #4D4D4F; }
+#average .col.chart .bars li:nth-child(1) div { background: #4D4D4F; }
+#average .col.chart .bars li:nth-child(2) span { color: #005D7E; }
+#average .col.chart .bars li:nth-child(2) div { background: #004C6C; }
+#average .col.chart .bars li:nth-child(3) span { color: #4BA7C7; }
+#average .col.chart .bars li:nth-child(3) div { background: #109CBF; }
+#average .col.chart .bars li:nth-child(4) span { color: #32BCB8; }
+#average .col.chart .bars li:nth-child(4) div { background: #00B4AE; }
+#average .col.chart .bars li:nth-child(5) span { color: #87BD7A; }
+#average .col.chart .bars li:nth-child(5) div { background: #73B564; position: relative; }
+#average .col.chart .bars li:nth-child(5) div:after { content: 'Frequency'; position: absolute; left: 0; top: 30px; text-transform: uppercase; font-size: 10px; color: #929497; letter-spacing: 1px; }
+
+#stand { background: #00AFAA; color: #fff; }
 
 /* != PLACEHOLDER ATTRIBUTE STYLES = input or textarea - placeholder="whatever" ===== */
 /* ::-webkit-input-placeholder { color: #aaa; } :-moz-placeholder           { color: #aaa; }
