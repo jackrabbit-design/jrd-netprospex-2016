@@ -316,7 +316,36 @@ html, body { font-family: 'OpenSans', Helvetica, Arial, "Helvetica Neue", sans-s
 #average .col.chart .bars li:nth-child(5) div { background: #73B564; position: relative; }
 #average .col.chart .bars li:nth-child(5) div:after { content: 'Frequency'; position: absolute; left: 0; top: 30px; text-transform: uppercase; font-size: 10px; color: #929497; letter-spacing: 1px; }
 
-#stand { background: #00AFAA; color: #fff; }
+#stand { background: #00AFAA url(../images/bg-stand.png) no-repeat 160px 10px; background-size: 180px auto; color: #fff; padding: 60px 150px 62px 390px; }
+#stand h2 { font-size: 30px; margin-bottom: 2px; }
+#stand p { font-size: 16px; line-height: 1.625; }
+#stand p a { color: #fff; font-weight: 600; }
+#stand p a:hover { text-decoration: underline; }
+
+.stateof { width: 880px; padding: 70px 0 70px; margin: 0 auto; }
+.stateof .left { width: 305px; height: 361px; border: 1px solid #F29E52; margin-right: 36px; float: left; text-align: center; }
+.stateof .left h3 { font-size: 16px; letter-spacing: 2px; font-weight: 600; color: #F29E52; position: relative; padding: 0 6px; top: -14px; display: inline-block; background: #fff; }
+.stateof .left h4 { font: 600 13px/1 OpenSans; color: #109CBF; text-transform: uppercase; padding: 23px 0 18px; }
+.stateof .left .sort { font-size: 11px; color: #929497; text-transform: uppercase; padding: 0 0 34px; }
+.stateof .left .sort .chosen-container { margin-left: 10px; }
+.stateof .left .graph { width: 250px; height: 170px; border-bottom: 1px solid #c9c9cb; position: relative; line-height: 170px; text-align: left; font-size: 0; box-sizing: border-box; padding: 0 0 0 10px; margin: 0 0 0 40px; }
+.stateof .left .graph li { display: inline-block; vertical-align: bottom; width: 30px; background: #C04D17; margin: 0 8px; position: relative; transition: height 0.2s; border: 1px solid black; }
+.stateof .left .graph li span { text-align: center; left: 50%; bottom: -20px; font: 600 6px/1 OpenSans; color: #929497; text-transform: uppercase; display: inline-block; position: absolute; width: 52px; margin-left: -26px; letter-spacing: -0.5px; }
+.stateof .left .graph:after { content: ''; display: block; width: 40px; height: 177px; background: url("../images/percentages.png") no-repeat; background-size: 40px auto; position: absolute; bottom: -4px; left: -30px; }
+.stateof .left h5 { font: 11px/1 OpenSans; text-transform: uppercase; color: #929497; padding: 30px 0 0; }
+.stateof .right { float: right; width: 550px; }
+.stateof .right h3 { padding: 0 0 0 88px; margin-bottom: 25px; font: 500 38px/45px OpenSans; color: #fff; background-repeat: no-repeat; background-position: center left; }
+.stateof .right p { font: 13.5px/21px OpenSans; color: #fff; }
+.stateof .right h4 { font: 500 11px/13px OpenSans; text-align: center; text-transform: uppercase; padding: 45px 0 15px; }
+.stateof .right .scale { position: relative; padding-top: 22px; width: 535px; }
+.stateof .right .scale > span { font: 700 11px OpenSans; color: #fff; position: absolute; top: 0px; }
+.stateof .right .scale > span.min { left: 0; }
+.stateof .right .scale > span.max { right: 0; }
+.stateof .right .scale .track { background: #fff; height: 5px; margin-bottom: 8px; }
+.stateof .right .scale .track span { height: 5px; display: block; position: relative; }
+.stateof .right .scale .track span small { position: absolute; font: 700 11px OpenSans; color: #fff; right: -7px; top: -22px; }
+.stateof .right .scale .track span small:after { content: ''; border: 4px solid transparent; border-top: 4px solid #fff; position: absolute; left: 50%; margin-left: -4px; bottom: -8px; }
+.stateof .right .scale img { width: 535px; }
 
 /* != PLACEHOLDER ATTRIBUTE STYLES = input or textarea - placeholder="whatever" ===== */
 /* ::-webkit-input-placeholder { color: #aaa; } :-moz-placeholder           { color: #aaa; }
@@ -331,3 +360,48 @@ input[type=submit], button { display: inline-block; cursor: pointer; }
 /* !MEDIA QUERIES */
 /* ========================================================================= */
 /* @media screen and (max-width: XXXpx) {  } */
+/*--------- Chosen -------------*/
+/* @group Base */
+.chosen-container { position: relative; display: inline-block; vertical-align: middle; font-size: 11px; zoom: 1; *display: inline; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; font-family: OpenSans; text-transform: uppercase; text-align: left; }
+.chosen-container * { box-sizing: border-box; }
+.chosen-container .chosen-drop { position: absolute; top: 100%; left: -9999px; z-index: 1010; width: 100%; border: 1px solid #f8cea8; border-top: 0; background: #fff; }
+.chosen-container.chosen-with-drop .chosen-drop { left: 0; }
+.chosen-container a { cursor: pointer; }
+
+/* @end */
+/* @group Single Chosen */
+.chosen-container-single .chosen-single { position: relative; display: block; overflow: hidden; padding: 0 0 0 10px; height: 23px; line-height: 23px; border: 1px solid #f8cea8; color: #929497; background: transparent; }
+
+.chosen-wrap-box2 .chosen-container-single .chosen-single { background: #fff; color: #929497; border: 1px solid #f8cea8; }
+
+.chosen-container-single .chosen-default { color: #5A5A5A; }
+.chosen-container-single .chosen-single span { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 11px; padding-right: 15px; }
+.chosen-container-single .chosen-single-with-deselect span { /*margin-right: 38px;*/ }
+.chosen-container-single .chosen-single abbr { position: absolute; top: 6px; right: 26px; display: block; width: 12px; height: 12px; /*background: url('../images/chosen-sprite.png') -42px 1px no-repeat;*/ font-size: 1px; }
+.chosen-container-single .chosen-single abbr:hover { background-position: -42px -10px; }
+.chosen-container-single.chosen-disabled .chosen-single abbr:hover { background-position: -42px -10px; }
+.chosen-container-single.chosen-disabled .chosen-single span { opacity: 0.5; filter: alpha(opacity=50); }
+.chosen-container-single .chosen-single div { position: absolute; top: 15px; right: 12px; display: block; width: 11px; height: 6px; }
+.chosen-container-single .chosen-single div b { display: block; width: 100%; height: 100%; font-family: "theme-icon" !important; position: relative; }
+.chosen-container-single .chosen-single div b:after { position: absolute; content: ''; top: -12px; left: -2px; width: 8px; height: 8px; border-right: 1px solid #f8cea8; border-bottom: 1px solid #f8cea8; display: block; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
+
+.chosen-container-active.chosen-with-drop .chosen-single div b:after { -webkit-transform: rotate(225deg); -ms-transform: rotate(225deg); transform: rotate(225deg); top: -6px; }
+
+.chosen-wrap-box2 .chosen-container-single .chosen-single div { color: #6ea1b6; }
+
+.chosen-container-single .chosen-search { position: relative; z-index: 1010; margin: 0; padding: 3px 4px; white-space: nowrap; display: block; }
+.chosen-container-single .chosen-search input[type="text"] { border: none; width: 99.8%; display: block; margin-left: 0; }
+.chosen-container-single .chosen-drop { margin-top: -1px; background-clip: padding-box; }
+.chosen-container-single.chosen-container-single-nosearch .chosen-search { position: absolute; left: -9999px; }
+
+/* @end */
+/* @group Results */
+.chosen-container .chosen-results { color: #5A5A5A; position: relative; overflow-x: hidden; overflow-y: auto; max-height: 240px; -webkit-overflow-scrolling: touch; font-size: 11px; font-weight: normal; }
+.chosen-container .chosen-results li { display: none; margin: 0; padding: 5px 10px; list-style: none; line-height: 16px; font-size: 11px; font-weight: normal; word-wrap: break-word; -webkit-touch-callout: none; }
+.chosen-container .chosen-results li.active-result { display: list-item; cursor: pointer; }
+.chosen-container .chosen-results li.disabled-result { display: list-item; color: #8d8c8c; cursor: default; }
+.chosen-container .chosen-results li.highlighted { background-color: #eee; }
+.chosen-container .chosen-results li.no-results { color: #8d8c8c; display: list-item; background: #f4f4f4; }
+.chosen-container .chosen-results li.group-result { display: list-item; font-weight: bold; cursor: default; }
+.chosen-container .chosen-results li.group-option { padding-left: 15px; }
+.chosen-container .chosen-results li em { font-style: normal; text-decoration: underline; }
