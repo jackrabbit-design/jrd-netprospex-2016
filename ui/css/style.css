@@ -221,7 +221,7 @@ html, body { font-family: 'OpenSans', Helvetica, Arial, "Helvetica Neue", sans-s
 #download { background: #004c6c; text-align: center; color: #fff; padding: 50px 70px 0; font-size: 0; }
 #download h5 { font-size: 32px; font-weight: 300; }
 #download h3 { font-size: 48px; font-weight: 600; }
-#download .download { padding: 16px 16px 16px 66px; text-transform: uppercase; font: 600 18px/20px 'OpenSans'; color: #fff; text-align: left; width: 255px; display: inline-block; margin: 55px 0; background: #73B564 url(../images/arrow-download.png) no-repeat 15px center; background-size: 35px auto; transition: background-color 0.2s; }
+#download .download { padding: 16px 16px 16px 66px; text-transform: uppercase; font: 600 18px/20px 'OpenSans'; color: #fff; text-align: left; width: 255px; display: inline-block; margin: 55px 0; background: #73B564 url(../images/arrow-download.png) no-repeat 15px center; background-size: 35px auto; -webkit-transition: background-color 0.2s; transition: background-color 0.2s; }
 #download .download:hover { background-color: #109cbf; }
 #download h4 { font-size: 40px; font-weight: 600; margin-bottom: 10px; }
 #download p { font-size: 16px; line-height: 1.625; padding: 0 30px; }
@@ -322,30 +322,52 @@ html, body { font-family: 'OpenSans', Helvetica, Arial, "Helvetica Neue", sans-s
 #stand p a { color: #fff; font-weight: 600; }
 #stand p a:hover { text-decoration: underline; }
 
-.stateof { width: 880px; padding: 70px 0 70px; margin: 0 auto; }
-.stateof .left { width: 305px; height: 361px; border: 1px solid #F29E52; margin-right: 36px; float: left; text-align: center; }
-.stateof .left h3 { font-size: 16px; letter-spacing: 2px; font-weight: 600; color: #F29E52; position: relative; padding: 0 6px; top: -14px; display: inline-block; background: #fff; }
+.stateof { width: 880px; padding: 0 0 70px; margin: 0 auto; }
+.stateof h2 { font: 600 40px/1.1 OpenSans; color: #004D71; background: url(../images/indicator.png) no-repeat 218px center; background-size: 87px auto; padding: 55px 0 55px 342px; }
+.stateof .left { width: 305px; height: 361px; border: 1px solid #F29E52; float: left; text-align: center; }
+.stateof .left h3 { font-size: 16px; letter-spacing: 1px; font-weight: 600; color: #F29E52; position: relative; padding: 0 6px; top: -14px; display: inline-block; background: #fff; }
 .stateof .left h4 { font: 600 13px/1 OpenSans; color: #109CBF; text-transform: uppercase; padding: 23px 0 18px; }
 .stateof .left .sort { font-size: 11px; color: #929497; text-transform: uppercase; padding: 0 0 34px; }
 .stateof .left .sort .chosen-container { margin-left: 10px; }
 .stateof .left .graph { width: 250px; height: 170px; border-bottom: 1px solid #c9c9cb; position: relative; line-height: 170px; text-align: left; font-size: 0; box-sizing: border-box; padding: 0 0 0 10px; margin: 0 0 0 40px; }
-.stateof .left .graph li { display: inline-block; vertical-align: bottom; width: 30px; background: #C04D17; margin: 0 8px; position: relative; transition: height 0.2s; border: 1px solid black; }
+.stateof .left .graph li { display: inline-block; vertical-align: bottom; width: 30px; background: #C04D17; margin: 0 8px; position: relative; -webkit-transition: height 0.2s; transition: height 0.2s; border: 1px solid #f29f5a; }
 .stateof .left .graph li span { text-align: center; left: 50%; bottom: -20px; font: 600 6px/1 OpenSans; color: #929497; text-transform: uppercase; display: inline-block; position: absolute; width: 52px; margin-left: -26px; letter-spacing: -0.5px; }
 .stateof .left .graph:after { content: ''; display: block; width: 40px; height: 177px; background: url("../images/percentages.png") no-repeat; background-size: 40px auto; position: absolute; bottom: -4px; left: -30px; }
 .stateof .left h5 { font: 11px/1 OpenSans; text-transform: uppercase; color: #929497; padding: 30px 0 0; }
-.stateof .right { float: right; width: 550px; }
-.stateof .right h3 { padding: 0 0 0 88px; margin-bottom: 25px; font: 500 38px/45px OpenSans; color: #fff; background-repeat: no-repeat; background-position: center left; }
-.stateof .right p { font: 13.5px/21px OpenSans; color: #fff; }
-.stateof .right h4 { font: 500 11px/13px OpenSans; text-align: center; text-transform: uppercase; padding: 45px 0 15px; }
-.stateof .right .scale { position: relative; padding-top: 22px; width: 535px; }
-.stateof .right .scale > span { font: 700 11px OpenSans; color: #fff; position: absolute; top: 0px; }
+.stateof .right { float: right; width: 537px; }
+.stateof .right p { font: 16px/1.625 OpenSans; color: #4d4d4d; }
+.stateof .right h4 { font: 500 11px/13px OpenSans; text-align: center; text-transform: uppercase; padding: 45px 0 15px; color: #109CBF; }
+.stateof .right .scale { position: relative; padding-top: 22px; width: 537px; }
+.stateof .right .scale > span { font: 400 11px OpenSans; color: #929497; position: absolute; top: 3px; }
 .stateof .right .scale > span.min { left: 0; }
 .stateof .right .scale > span.max { right: 0; }
-.stateof .right .scale .track { background: #fff; height: 5px; margin-bottom: 8px; }
-.stateof .right .scale .track span { height: 5px; display: block; position: relative; }
-.stateof .right .scale .track span small { position: absolute; font: 700 11px OpenSans; color: #fff; right: -7px; top: -22px; }
-.stateof .right .scale .track span small:after { content: ''; border: 4px solid transparent; border-top: 4px solid #fff; position: absolute; left: 50%; margin-left: -4px; bottom: -8px; }
+.stateof .right .scale .track { background: #E6E7E8; height: 5px; margin-bottom: 8px; }
+.stateof .right .scale .track span { height: 5px; display: block; position: relative; background: #F29E52; }
+.stateof .right .scale .track span small { position: absolute; font: 700 11px OpenSans; color: #004D71; right: -7px; top: -22px; }
+.stateof .right .scale .track span small:after { content: ''; border: 4px solid transparent; border-top: 4px solid #F29E52; position: absolute; left: 50%; margin-left: -4px; bottom: -8px; }
 .stateof .right .scale img { width: 535px; }
+
+.spotlight { padding: 40px 0 40px 180px; color: #fff; }
+.spotlight .blue { background: rgba(16, 156, 191, 0.95) url(../images/spotlight.png) no-repeat 27px center; background-size: 122px auto; padding: 30px 150px 30px 175px; }
+.spotlight h4 { font-size: 20px; margin-bottom: 20px; }
+.spotlight .text { border-left: 2px solid rgba(255, 255, 255, 0.25); padding: 10px 0 10px 33px; }
+.spotlight .text p { font-size: 14px; line-height: 1.6; }
+.spotlight .q, .spotlight .a { padding-left: 65px; position: relative; }
+.spotlight .q:before, .spotlight .a:before { content: ''; color: #1699b9; background: #fff; width: 40px; height: 30px; display: block; position: absolute; top: 0; left: 0; font-weight: 600; line-height: 28px; font-size: 23px; text-align: center; vertical-align: top; z-index: 2; }
+.spotlight .q:after, .spotlight .a:after { content: ''; width: 11px; height: 8px; background: #fff; position: absolute; left: 20px; top: 30px; display: block; -webkit-transform: skewY(35deg); -ms-transform: skewY(35deg); transform: skewY(35deg); -webkit-transform-origin: bottom right; -ms-transform-origin: bottom right; transform-origin: bottom right; z-index: 1; }
+.spotlight .q { margin-bottom: 30px; }
+.spotlight .q:before { content: 'Q'; }
+.spotlight .q h5 { font-size: 14px; text-transform: uppercase; font-weight: 600; letter-spacing: 1px; margin-bottom: 5px; }
+.spotlight .a:before { content: 'A'; }
+.spotlight .a .percent { float: left; font-size: 55px; line-height: 1; padding-left: 10px; }
+.spotlight .a .percent small { font-size: 40px; }
+
+#quote { padding: 60px 0; background: #004C6C; background-size: 1107px auto; position: relative; }
+#quote .bubble { margin: 0 auto; width: 660px; padding: 30px 70px; border: 2px solid #fff; position: relative; }
+#quote p { font-size: 20px; line-height: 1.4; color: #fff; font-weight: 300; }
+#quote strong { font-weight: 600; font-size: 16px; color: #fff; display: block; margin-top: 20px; }
+#quote .speech { width: 45px; height: 45px; overflow: hidden; bottom: -45px; right: 100px; position: absolute; }
+#quote .speech:after { content: ''; display: block; width: 45px; height: 55px; background: #004C6C; border: 2px solid #fff; border-bottom-width: 3px; -webkit-transform: skewY(45deg); -ms-transform: skewY(45deg); transform: skewY(45deg); position: absolute; bottom: 22px; right: 0; }
 
 /* != PLACEHOLDER ATTRIBUTE STYLES = input or textarea - placeholder="whatever" ===== */
 /* ::-webkit-input-placeholder { color: #aaa; } :-moz-placeholder           { color: #aaa; }
