@@ -100,6 +100,8 @@ body, input, button, textarea { -webkit-font-smoothing: antialiased; -moz-osx-fo
 /* ========================================================================= */
 html, body { font-family: 'OpenSans', Helvetica, Arial, "Helvetica Neue", sans-serif; background: #e7e7e8; color: #4D4D4F; }
 
+a { color: #004D71; }
+
 /* != SELECTION STYLES (Leaving these blank will show no indication of text selection) ===== */
 /* ::selection         { background: #aaa; color: #fff; } ::-moz-selection    { background: #aaa; color: #fff; } ::-webkit-selection { background: #aaa; color: #fff; }
 */
@@ -186,11 +188,28 @@ html, body { font-family: 'OpenSans', Helvetica, Arial, "Helvetica Neue", sans-s
 
 .wrap { width: 1100px; box-sizing: border-box; margin: 0 auto; max-width: 100%; padding: 0 20px; }
 
-#main { width: 1024px; margin: 0 auto; background: #fff; }
+#main { width: 1024px; margin: 0 auto; background: #fff; position: relative; }
+
+strong { font-weight: 600; }
+
+#nav { width: 60px; height: 60px; background: #fff; background-size: 60px; position: absolute; left: 0; top: 100px; z-index: 5000; }
+#nav span, #nav span:before, #nav span:after { width: 36px; height: 4px; background: #3396b7; border-radius: 2px; display: block; position: absolute; pointer-events: none; }
+#nav span { top: 29px; left: 12px; }
+#nav span:before, #nav span:after { content: ''; }
+#nav span:before { top: -10px; }
+#nav span:after { bottom: -10px; }
+#nav > div { position: relative; width: 0px; transition: width 0.15s; overflow: hidden; }
+#nav > div.open { width: 320px; height: 410px; }
+#nav > div.open + span { opacity: 0.6; }
+#nav ul { position: absolute; left: 60px; top: 0; background: #fff; width: 285px; }
+#nav ul li { display: block; border-bottom: 1px solid #F2F2F2; font: 400 14px/1 OpenSans; }
+#nav ul li a { color: #004D71; display: block; padding: 14px 14px; }
+#nav ul li:hover { background: #004D71; }
+#nav ul li:hover a { color: #fff; }
 
 #banner { background: url(../images/bg-banner.png) no-repeat center center; background-size: cover; min-height: 710px; position: relative; }
-#banner .text { float: right; max-width: 300px; text-align: center; margin: 240px 170px 0 0; }
-#banner h1 { font-size: 55px; line-height: 1.2; color: #fff; font-weight: 300; }
+#banner .text { float: right; max-width: 360px; text-align: center; margin: 240px 100px 0 0; }
+#banner h1 { font-size: 55px; line-height: 1.2; color: #fff; font-weight: 300; text-transform: uppercase; }
 #banner h1 small { font-size: 26px; line-height: 60px; font-weight: 600; letter-spacing: 8px; vertical-align: top; }
 #banner .db { display: block; margin: 40px auto 0; width: 291px; }
 #banner .bulb { position: absolute; width: 490px; height: 586px; left: 30px; background: url(../images/bulb-banner-nolight.png) no-repeat center center; background-size: contain; transition: bottom .75s; }
@@ -385,7 +404,7 @@ html, body { font-family: 'OpenSans', Helvetica, Arial, "Helvetica Neue", sans-s
 .stateof .left .graph li:hover i { top: -25px; opacity: 1; }
 .stateof .left .graph:after { content: ''; display: block; width: 40px; height: 177px; background: url("../images/percentages.png") no-repeat; background-size: 40px auto; position: absolute; bottom: -4px; left: -30px; }
 .stateof .left h5 { font: 11px/1 OpenSans; text-transform: uppercase; color: #929497; padding: 30px 0 0; }
-.stateof .right { float: right; width: 537px; }
+.stateof .right { float: right; width: 540px; }
 .stateof .right p { font: 16px/1.625 OpenSans; color: #4d4d4d; }
 .stateof .right h4 { font: 500 11px/13px OpenSans; text-align: center; text-transform: uppercase; padding: 45px 0 15px; color: #109CBF; }
 .stateof .right .scale { position: relative; padding-top: 22px; width: 537px; }
@@ -411,7 +430,7 @@ html, body { font-family: 'OpenSans', Helvetica, Arial, "Helvetica Neue", sans-s
 .spotlight .q:before { content: 'Q'; }
 .spotlight .q h5 { font-size: 14px; text-transform: uppercase; font-weight: 600; letter-spacing: 1px; margin-bottom: 5px; }
 .spotlight .a:before { content: 'A'; }
-.spotlight .a .percent { float: left; font-size: 55px; line-height: 1; padding-right: 10px; }
+.spotlight .a .percent { float: left; font-size: 55px; line-height: 1; padding-right: 10px; position: relative; top: -7px; }
 .spotlight .a .percent small { font-size: 40px; }
 .spotlight.nogo .blue { left: 100%; }
 .spotlight.go .blue { left: 0%; }
@@ -420,7 +439,7 @@ html, body { font-family: 'OpenSans', Helvetica, Arial, "Helvetica Neue", sans-s
 #quote:before, #quote:after { content: ''; background-repeat: no-repeat; position: absolute; transition: all 0.25s ease 1s; }
 #quote:before { background-image: url(../images/ico-chess.png); background-size: 90px auto; width: 90px; height: 119px; right: 55px; top: 50px; }
 #quote:after { background-image: url(../images/ico-people.png); background-size: 177px auto; width: 177px; height: 131px; left: 75px; bottom: -20px; }
-#quote .bubble { margin: 0 auto; width: 660px; padding: 30px 70px; border: 2px solid #fff; position: relative; z-index: 10; }
+#quote .bubble { margin: 0 auto; width: 660px; padding: 30px 65px; border: 2px solid #fff; position: relative; z-index: 10; }
 #quote p { font-size: 20px; line-height: 1.4; color: #fff; font-weight: 300; }
 #quote strong { font-weight: 600; font-size: 16px; color: #fff; display: block; margin-top: 20px; }
 #quote .speech { width: 45px; height: 45px; overflow: hidden; bottom: -45px; right: 100px; position: absolute; }

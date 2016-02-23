@@ -67,4 +67,15 @@ jQuery(function($){
         go();
     });
 
+    $('#nav').click(function(){
+        $('div',this).toggleClass('open');
+    });
+
+    $('#nav a').click(function(){
+        var scroll = $($(this).attr('href')).offset().top;
+        $('html, body').animate({scrollTop : scroll},400);
+        $('#nav > div').removeClass('open');
+        return false;
+    });
+
 });

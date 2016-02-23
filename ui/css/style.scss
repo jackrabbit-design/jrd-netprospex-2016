@@ -84,6 +84,7 @@
 /* ========================================================================= */
 
 	html, body { font-family:'OpenSans', Helvetica, Arial, "Helvetica Neue", sans-serif; background:#e7e7e8; color:#4D4D4F; }
+    a { color:$blu; }
 
 /* != SELECTION STYLES (Leaving these blank will show no indication of text selection) ===== */
 /*
@@ -144,7 +145,82 @@
 
     .wrap { width: 1100px; box-sizing: border-box; margin: 0 auto; max-width: 100%; padding: 0 20px; }
 
-    #main { width:1024px; margin:0 auto; background:#fff; }
+    #main { width:1024px; margin:0 auto; background:#fff; position: relative;}
+
+    strong {
+        font-weight:600;
+    }
+
+    #nav {
+        width:60px;
+        height:60px;
+        background:#fff;
+        background-size:60px;
+        position: absolute;
+        left:0;
+        top:100px;
+        z-index:5000;
+        span {
+            &, &:before, &:after {
+                width: 36px;
+                height:4px;
+                background:#3396b7;
+                border-radius:2px;
+                display:block;
+                position:absolute;
+                pointer-events: none;
+            }
+            & {
+                top:29px;
+                left:12px;
+            }
+            &:before, &:after {
+                content:'';
+            }
+            &:before {
+                top:-10px;
+            }
+            &:after {
+                bottom:-10px;
+            }
+        }
+        >div {
+            position: relative;
+            width:0px;
+            transition:width 0.15s;
+            overflow: hidden;
+            &.open {
+                width:320px;
+                height:410px;
+                & + span {
+                    opacity:0.6;
+                }
+            }
+        }
+        ul {
+            position: absolute;
+            left:60px;
+            top:0;
+            background:#fff;
+            width:285px;
+            li {
+                display:block;
+                border-bottom:1px solid #F2F2F2;
+                 font:400 14px/1 OpenSans;
+                a {
+                    color:$blu;
+                    display:block;
+                    padding:14px 14px;
+                }
+                &:hover {
+                    background:$blu;
+                    a {
+                        color:#fff;
+                    }
+                }
+            }
+        }
+    }
 
     #banner {
         background:url(../images/bg-banner.png) no-repeat center center;
@@ -153,15 +229,16 @@
         position: relative;
         .text {
             float:right;
-            max-width:300px;
+            max-width:360px;
             text-align:center;
-            margin:240px 170px 0 0;
+            margin:240px 100px 0 0;
         }
         h1 {
             font-size:55px;
             line-height:1.2;
             color:#fff;
             font-weight:300;
+            text-transform: uppercase;
             small {
                 font-size:26px;
                 line-height:60px;
@@ -1151,7 +1228,7 @@
         }
         .right {
             float:right;
-            width:537px;
+            width:540px;
             p { font:16px/1.625 OpenSans; color:#4d4d4d; }
             h4 { font:500 11px/13px OpenSans; text-align:center; text-transform: uppercase; padding:45px 0 15px; color:#109CBF; }
             .scale { position: relative; padding-top:22px; width:537px;
@@ -1255,6 +1332,8 @@
                 font-size:55px;
                 line-height:1;
                 padding-right:10px;
+                position: relative;
+                top:-7px;
                 small {
                     font-size:40px;
                 }
@@ -1303,7 +1382,7 @@
         .bubble {
             margin:0 auto;
             width:660px;
-            padding:30px 70px;
+            padding:30px 65px;
             border:2px solid #fff;
             position: relative;
             z-index:10;
