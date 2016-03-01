@@ -207,8 +207,8 @@ strong { font-weight: 600; }
 #nav ul li:hover { background: #004D71; }
 #nav ul li:hover a { color: #fff; }
 
-#banner { background: url(../images/bg-banner.png) no-repeat center center; background-size: cover; min-height: 710px; position: relative; }
-#banner .text { float: right; max-width: 360px; text-align: center; margin: 240px 100px 0 0; }
+#banner { background: url(../images/bg-banner.png) no-repeat center center; background-size: cover; min-height: 650px; position: relative; }
+#banner .text { float: right; max-width: 360px; text-align: center; margin: 160px 100px 0 0; }
 #banner h1 { font-size: 55px; line-height: 1.2; color: #fff; font-weight: 300; text-transform: uppercase; }
 #banner h1 small { font-size: 26px; line-height: 60px; font-weight: 600; letter-spacing: 8px; vertical-align: top; }
 #banner .db { display: block; margin: 40px auto 0; width: 291px; }
@@ -226,10 +226,10 @@ strong { font-weight: 600; }
 @keyframes bulbAnim { 0% { opacity: 0; }
   70% { opacity: 0; }
   100% { opacity: 1; } }
-#welcome { padding: 60px 100px 320px; background: #004C6C url(../images/bg-welcome.png) no-repeat right bottom; background-size: 1107px auto; position: relative; }
+#welcome { padding: 60px 100px 290px; background: #004C6C url(../images/bg-welcome.png) no-repeat right bottom; background-size: 1107px auto; position: relative; }
 #welcome .left { float: left; width: 180px; text-align: right; font-size: 40px; line-height: 1.1; font-weight: 600; color: #fff; opacity: 0; transition: all 0.5s ease 0.5s; -webkit-transform: translateY(-50px); -ms-transform: translateY(-50px); transform: translateY(-50px); }
-#welcome .right { float: right; width: 600px; padding: 40px 32px; border: 2px solid #fff; position: relative; transition: all 0.5s ease 0.5s; opacity: 0; -webkit-transform: translateY(-50px); -ms-transform: translateY(-50px); transform: translateY(-50px); }
-#welcome p { font-size: 16px; line-height: 1.625; color: #fff; }
+#welcome .right { float: right; width: 600px; padding: 32px; border: 2px solid #fff; position: relative; transition: all 0.5s ease 0.5s; opacity: 0; -webkit-transform: translateY(-50px); -ms-transform: translateY(-50px); transform: translateY(-50px); }
+#welcome p { font-size: 16px; line-height: 1.5; color: #fff; }
 #welcome p + p { margin-top: 1em; }
 #welcome .speech { width: 45px; height: 45px; overflow: hidden; bottom: -45px; left: 70px; position: absolute; }
 #welcome .speech:after { content: ''; display: block; width: 45px; height: 55px; background: #004C6C; border: 2px solid #fff; border-bottom-width: 3px; -webkit-transform: skewY(-45deg); -ms-transform: skewY(-45deg); transform: skewY(-45deg); position: absolute; bottom: 22px; right: 0; }
@@ -249,6 +249,9 @@ strong { font-weight: 600; }
 #powerup .overcolor:after { width: 173px; height: 110px; background-image: url(../images/powerup-2.png); right: 150px; bottom: -50px; }
 #powerup h3 { font-weight: 600; font-size: 40px; line-height: 1.1; margin-bottom: 20px; }
 #powerup p { font-size: 16px; line-height: 1.625; }
+#powerup ul { margin: 10px 140px 0 0; }
+#powerup ul li { font-size: 0.9em; margin-bottom: 4px; padding-left: 20px; position: relative; }
+#powerup ul li:before { content: ''; width: 4px; height: 4px; border-radius: 2px; background: #fff; position: absolute; top: 9px; left: 7px; }
 #powerup.nogo .overcolor { left: 100%; }
 #powerup.nogo .overcolor:before, #powerup.nogo .overcolor:after { opacity: 0; -webkit-transform: translateY(-100px); -ms-transform: translateY(-100px); transform: translateY(-100px); }
 #powerup.go .overcolor { left: 0%; }

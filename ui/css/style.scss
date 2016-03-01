@@ -225,13 +225,13 @@
     #banner {
         background:url(../images/bg-banner.png) no-repeat center center;
         background-size:cover;
-        min-height:710px;
+        min-height:650px;
         position: relative;
         .text {
             float:right;
             max-width:360px;
             text-align:center;
-            margin:240px 100px 0 0;
+            margin:160px 100px 0 0;
         }
         h1 {
             font-size:55px;
@@ -305,7 +305,7 @@
     }
 
     #welcome {
-        padding:60px 100px 320px;;
+        padding:60px 100px 290px;
         background:#004C6C url(../images/bg-welcome.png) no-repeat right bottom;
         background-size:1107px auto;
         position: relative;
@@ -325,7 +325,7 @@
         .right {
             float:right;
             width:600px;
-            padding:40px 32px;
+            padding:32px;
             border:2px solid #fff;
             position: relative;
             transition:all 0.5s ease 0.5s;
@@ -334,7 +334,7 @@
         }
         p {
             font-size:16px;
-            line-height:1.625;
+            line-height:1.5;
             color:#fff;
             &+p {
                 margin-top:1em;
@@ -444,6 +444,24 @@
         p {
             font-size:16px;
             line-height:1.625;
+        }
+        ul {
+            margin:10px 140px 0 0;
+            li {
+                font-size:0.9em;
+                margin-bottom:4px;
+                padding-left:20px;
+                position: relative;
+                &:before {
+                    content:'';
+                    @include size(4px);
+                    border-radius:2px;
+                    background:#fff;
+                    position: absolute;
+                    top:9px;
+                    left:7px;
+                }
+            }
         }
         &.nogo {
             .overcolor {
